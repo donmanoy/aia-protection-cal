@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <!--script type="text/javascript" src="file:///System/Library/WidgetResources/AppleClasses/AppleAnimator.js" charset="utf-8"></script>
+    <script type="text/javascript" src="file:///System/Library/WidgetResources/AppleClasses/AppleButton.js" charset="utf-8"></script>
+    <script type="text/javascript" src="file:///System/Library/WidgetResources/AppleClasses/AppleInfoButton.js" charset="utf-8"></script-->
+    <link rel="stylesheet" href="main.css">
+    <script type="text/javascript" src="Parts/parts.js" charset="utf-8"></script>
+    <script type="text/javascript" src="en.lproj/localizedStrings.js" charset="utf-8"></script>
+    <script type="text/javascript" src="main.js" charset="utf-8"></script>
+    <script type="text/javascript" src="calculator.js" charset="utf-8"></script>
+    <!--script type="text/javascript" src="AppleSlider.js" charset="utf-8"></script-->
+    <script type="text/javascript" src="file:///System/Library/WidgetResources/AppleClasses/AppleSlider.js" charset="utf-8"></script>
+</head>
+<body onload="load();">
+    <div id="LandingScreen">
+        <div id="image"><img src="Images/landing_screen_bg.png" id="inner_image"></div>
+        <div id="image2" onclick="letFindoutHandler(event)"><img src="Images/btn_findout.png" id="inner_image2"></div>
+    </div>
+    <div id="ImportantNotesScreen">
+        <div id="imgINS_bg"><img src="Images/important_notes_screen_bg.png" id="inner_image1"></div>
+        <div id="btnContinueINS" onclick="bbtnContinueImportantNotesScreenHandler(event)"><img src="Images/btn_continue~ipad.png" id="inner_image3"></div>
+    </div>
+    <div id="Question1Screen">
+        <div id="q1_bg_img"><img src="Images/q1_bg.png" id="inner_image4"></div>
+        <div id="q1_img_male" onclick="q1MaleImgClicked(event)"><img src="Images/q_1_male_a~ipad.png" id="inner_image5"></div>
+        <div id="q1_img_female" onclick="q1FemaleImgClicked(event)"><img src="Images/q_1_female_n~ipad.png" id="inner_image6"></div>
+    </div>
+    <div id="Question2Screen">
+        <div id="q2_bg_img"><img src="Images/q2_bg_slider.png" id="inner_image16"></div>
+        <div id="q2_img_thumb"><img src="Images/q_2_man1~ipad.png" id="inner_image23"></div>
+        <div id="q2AgeDisplay"></div>
+        <input id="q2Slider" type="range" min="0" value="0" max="44" onchange="q2SliderChanged(event)">
+    </div>
+    <div id="Question3Screen">
+        <div id="q3_bg_img"><img src="Images/q3_bg.png" id="inner_image18"></div>
+        <div id="q3_un_img" onclick="q3UnClickedHandler(event)"><img src="Images/q_3_un_n~ipad.png" id="inner_image26"></div>
+        <div id="q3_no_img" onclick="q3NoClickedHandler(event)"><img src="Images/q_3_no_a~ipad.png" id="inner_image25"></div>
+        <div id="q3_yes_img" onclick="q3YesClickedHandler(event)"><img src="Images/q_3_yes_n~ipad.png" id="inner_image24"></div>
+    </div>
+    <div id="Question4Screen">
+        <div id="q4_bg_img"><img src="Images/q4_bg_slider.png" id="inner_image19"></div>
+        <div id="q4_img_thumb"><img src="Images/q_4_money1~ipad.png" id="inner_image27"></div>
+        <div id="q4IncomeDisplay"></div>
+        <input id="q4Slider" type="range" min="0" value="0" max="37" onchange="q4SliderChanged(event)">
+    </div>
+    <div id="Question5Screen">
+        <div id="q5_bg_img"><img src="Images/q5_bg_slider.png" id="inner_image20"></div>
+        <div id="q5_img_thumb"><img src="Images/q_5_child2~ipad.png" id="inner_image28"></div>
+        <div id="q5ChildDisplay"></div>
+        <input id="q5Slider" type="range" min="0" value="0" max="5" onchange="q5SliderChanged(event)">
+    </div>
+    <div id="Question6Screen">
+        <div id="q6_bg_img"><img src="Images/q6_bg_slider.png" id="inner_image21"></div>
+        <div id="q6_img_thumb"><img src="Images/q_6_family0~ipad.png" id="inner_image29"></div>
+        <div id="q6ParentDisplay"></div>
+        <input id="q6Slider" type="range" min="0" value="0" max="4" onchange="q6SliderChanged(event)">
+    </div>
+    <div id="Question7Screen">
+        <div id="q7_bg_img"><img src="Images/q7_bg_slider.png" id="inner_image22"></div>
+        <div id="q7_img_thumb"><img class="invalid" src="Images/q_8_insured1~ipad.png" id="inner_image30"></div>
+        <input id="q7Slider" type="range" min="0" value="0" max="49" onchange="q7SliderChanged(event)">
+        <div id="q7InsuredDisplay"></div>
+    </div>
+    <div id="YReportScreen">
+        <div id="image1"><img src="Images/reportscreen_bg.png" id="inner_image31"></div>
+        <div id="btn_back" onclick="goBack2TweakAnswers(event)"><img src="Images/btn-goback~ipad.png" id="inner_image32"></div>
+        <div id="lblYourProtectionNumber"></div>
+        <div id="lblPG"></div>
+        <div id="lblWithGap"></div>
+        <div id="lblWithoutGap"></div>
+        <div id="txtYPN"></div>
+        <div id="txtPG"></div>
+    </div>
+    <div id="ContactUsPlacer">
+        <div id="bg_img"><img src="Images/contactus_bg.png" id="inner_image7"></div>
+    </div>
+    <div id="WizzardBarPlacer">
+        <div id="wz_bg"><img src="Images/wizard_bg~ipad.png" id="inner_image8"></div>
+        <div id="wz_btn_q1" onclick="wzStep1ClickedHandle(event)"><img src="Images/step-1-n~ipad.png" id="inner_image9"></div>
+        <div id="wz_btn_q2" onclick="wzStep2ClickedHandle(event)"><img src="Images/step-2-n~ipad.png" id="inner_image10"></div>
+        <div id="wz_btn_q3" onclick="wzStep3ClickedHandle(event)"><img src="Images/step-3-n~ipad.png" id="inner_image11"></div>
+        <div id="wz_btn_q4" onclick="wzStep4ClickedHandle(event)"><img src="Images/step-4-n~ipad.png" id="inner_image12"></div>
+        <div id="wz_btn_q5" onclick="wzStep5ClickedHandle(event)"><img src="Images/step-5-n~ipad.png" id="inner_image13"></div>
+        <div id="wz_btn_q6" onclick="wzStep6ClickedHandle(event)"><img src="Images/step-6-n~ipad.png" id="inner_image14"></div>
+        <div id="wz_btn_q7" onclick="wzStep7ClickedHandle(event)"><img src="Images/step-7-n~ipad.png" id="inner_image15"></div>
+        <div id="wz_btn_yreport" onclick="wzYReportClickedHandle(event)"><img src="Images/yreport_btn~ipad.png" id="inner_image17"></div>
+    </div>
+</body>
+</html>
